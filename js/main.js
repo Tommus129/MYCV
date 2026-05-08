@@ -155,17 +155,19 @@ const form   = document.getElementById('contactForm');
 const status = document.getElementById('formStatus');
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const btn = form.querySelector('button');
-  const original = btn.innerHTML;
-  btn.innerHTML = 'Invio in corso…'; btn.disabled = true;
+  const btn     = form.querySelector('button[type="submit"]');
+  const btnSpan = btn.querySelector('[data-i18n="contact_send"]');
+  const origHtml = btn.innerHTML;
+  if (btnSpan) btnSpan.textContent = t('contact_sending');
+  btn.disabled = true;
   status.classList.remove('show', 'error');
 
   // Compila i campi nascosti prima dell'invio
   const nome    = document.getElementById('name').value.trim();
   const email   = document.getElementById('email').value.trim();
   const oggetto = document.getElementById('subject').value.trim();
-  document.getElementById('formReplyTo').value  = email;
-  document.getElementById('formSubject').value  =
+  document.getElementById('formReplyTo').value = email;
+  document.getElementById('formSubject').value =
     `📩 Messaggio da ${nome}${oggetto ? ' — ' + oggetto : ''}`;
 
   try {
@@ -176,22 +178,28 @@ form.addEventListener('submit', async (e) => {
     });
 
     if (res.ok) {
-      status.textContent = '✓ Messaggio inviato. Ti rispondo entro 24h.';
+      status.textContent = t('contact_success');
       status.classList.add('show');
-      btn.innerHTML = '✓ Inviato';
+      if (btnSpan) btnSpan.textContent = t('contact_sent');
       setTimeout(() => {
         form.reset();
-        btn.innerHTML = original; btn.disabled = false;
+        btn.innerHTML = origHtml;
+        const restored = btn.querySelector('[data-i18n="contact_send"]');
+        if (restored) restored.textContent = t('contact_send');
+        btn.disabled = false;
         setTimeout(() => status.classList.remove('show'), 2400);
       }, 1400);
     } else {
       const data = await res.json();
-      throw new Error(data?.errors?.map(e => e.message).join(', ') || 'Errore sconosciuto');
+      throw new Error(data?.errors?.map(e => e.message).join(', ') || 'unknown error');
     }
   } catch (err) {
-    status.textContent = '✕ Errore nell\'invio. Riprova o scrivimi direttamente a tprandini@proton.me';
+    status.textContent = t('contact_error');
     status.classList.add('show', 'error');
-    btn.innerHTML = original; btn.disabled = false;
+    btn.innerHTML = origHtml;
+    const restored = btn.querySelector('[data-i18n="contact_send"]');
+    if (restored) restored.textContent = t('contact_send');
+    btn.disabled = false;
   }
 });
 
@@ -214,3 +222,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 
 /* Anno corrente nel footer */
 document.getElementById('year').textContent = new Date().getFullYear();
+
+/* Applica la lingua salvata (lang.js ha già letto localStorage) */
+applyTranslations(currentLang);

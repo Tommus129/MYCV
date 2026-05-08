@@ -48,24 +48,33 @@
     </a>
     <nav>
       <ul class="nav-links">
-        <li><a href="#about">Chi sono</a></li>
-        <li><a href="#stack">Stack</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#portfolio">Progetti</a></li>
-        <li><a href="#timeline">Esperienza</a></li>
-        <li><a href="#services">Per te</a></li>
-        <li><a href="#contact">Contatti</a></li>
+        <li><a href="#about"    data-i18n="nav_about">Chi sono</a></li>
+        <li><a href="#stack"    data-i18n="nav_stack">Stack</a></li>
+        <li><a href="#skills"   data-i18n="nav_skills">Skills</a></li>
+        <li><a href="#portfolio" data-i18n="nav_portfolio">Progetti</a></li>
+        <li><a href="#timeline" data-i18n="nav_timeline">Esperienza</a></li>
+        <li><a href="#services" data-i18n="nav_services">Per te</a></li>
+        <li><a href="#contact"  data-i18n="nav_contact">Contatti</a></li>
       </ul>
     </nav>
     <div class="nav-actions">
-      <a href="Tommaso Prandini ITA.pdf" id="navCv" class="nav-cv" download="Tommaso Prandini ITA.pdf">
+      <!-- CV download — href e download aggiornati da applyTranslations -->
+      <a href="Tommaso Prandini ITA.pdf" id="navCv" class="nav-cv cv-link" download="Tommaso Prandini ITA.pdf">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
           <line x1="12" y1="15" x2="12" y2="3"/>
         </svg>
-        <span>Scarica CV</span>
+        <span data-i18n="nav_cv">Scarica CV</span>
       </a>
+
+      <!-- Language switch -->
+      <div class="lang-switch" aria-label="Cambia lingua">
+        <button class="lang-btn active" data-lang="it" onclick="setLang('it')">IT</button>
+        <span class="lang-sep" aria-hidden="true">|</span>
+        <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+      </div>
+
       <button class="theme-toggle" id="themeToggle" aria-label="Cambia tema">
         <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -84,10 +93,10 @@
   <div class="container hero-content">
     <div class="hero-badge" data-aos="fade-down">
       <span class="dot"></span>
-      <span>Disponibile per nuovi progetti — Q2 2026</span>
+      <span data-i18n="hero_badge">Disponibile per nuovi progetti — Q2 2026</span>
     </div>
 
-    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100" data-i18n-html="hero_title">
       Costruisco <span class="accent">piattaforme web</span><br />
       <span class="stroke">su misura</span> per chi le usa davvero.
     </h1>
@@ -96,23 +105,23 @@
       <span class="typed-text" id="typedText"></span><span class="caret"></span>
     </div>
 
-    <p class="hero-tagline" data-aos="fade-up" data-aos-delay="300">
+    <p class="hero-tagline" data-aos="fade-up" data-aos-delay="300" data-i18n="hero_tagline">
       Studente di Informatica per il Management con esperienza concreta nello sviluppo
       di piattaforme reali per aziende e professionisti. Codice pulito, design pensato,
       deadline rispettate.
     </p>
 
     <div class="hero-cta" data-aos="fade-up" data-aos-delay="400">
-      <a href="Tommaso Prandini ITA.pdf" id="heroCv" class="btn btn-primary" download="Tommaso Prandini ITA.pdf">
-        Scarica CV
-        <svg class="no-translate" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a href="Tommaso Prandini ITA.pdf" id="heroCv" class="btn btn-primary cv-link" download="Tommaso Prandini ITA.pdf">
+        <span data-i18n="hero_cta_cv">Scarica CV</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
           <polyline points="7 10 12 15 17 10"/>
           <line x1="12" y1="15" x2="12" y2="3"/>
         </svg>
       </a>
-      <a href="#portfolio" class="btn btn-ghost">Vedi i progetti</a>
-      <a href="#contact" class="btn btn-ghost">Contattami</a>
+      <a href="#portfolio" class="btn btn-ghost" data-i18n="hero_cta_projects">Vedi i progetti</a>
+      <a href="#contact"   class="btn btn-ghost" data-i18n="hero_cta_contact">Contattami</a>
     </div>
 
     <div class="hero-socials" data-aos="fade-up" data-aos-delay="500">
@@ -143,7 +152,7 @@
     </div>
   </div>
 
-  <div class="scroll-cue">scroll</div>
+  <div class="scroll-cue" data-i18n="scroll_cue">scroll</div>
 </section>
 
 <!-- ========== ABOUT ========== -->
@@ -151,36 +160,36 @@
   <div class="container">
     <header class="section-head" data-aos="fade-up">
       <span class="section-num">01</span>
-      <h2 class="section-title">Chi sono</h2>
+      <h2 class="section-title" data-i18n="about_title">Chi sono</h2>
       <span class="section-line"></span>
     </header>
 
     <div class="about-grid">
       <div class="about-text" data-aos="fade-up" data-aos-delay="100">
-        <p>
+        <p data-i18n-html="about_p1">
           Sono uno studente al <strong>terzo anno di Informatica per il Management</strong>,
           con la passione di trasformare problemi reali in prodotti digitali concreti.
         </p>
-        <p>
+        <p data-i18n-html="about_p2">
           Lavoro come full stack developer su <strong>siti personalizzati</strong> e
           <strong>piattaforme su misura</strong>: dal gestionale per uno studio di
           psicologhe alla piattaforma di monitoraggio ESG per aziende.
           Il mio approccio unisce rigore tecnico e attenzione al dettaglio, con
           l'obiettivo di consegnare strumenti che le persone usano davvero, ogni giorno.
         </p>
-        <p>
+        <p data-i18n="about_p3">
           Mi piacciono le interfacce silenziose, il codice che si legge come un romanzo
           e i progetti che risolvono qualcosa di vero. Niente buzzword, niente fuffa.
         </p>
       </div>
 
       <aside class="about-card" data-aos="fade-up" data-aos-delay="200">
-        <div class="about-card-label">Status</div>
+        <div class="about-card-label" data-i18n="about_status">Status</div>
         <div class="about-stats">
-          <div class="stat-row"><span class="stat-label">Anno di studi</span><span class="stat-val accent">3°</span></div>
-          <div class="stat-row"><span class="stat-label">Specializzazione</span><span class="stat-val">Full Stack</span></div>
-          <div class="stat-row"><span class="stat-label">Disponibilità</span><span class="stat-val accent">Aperta</span></div>
-          <div class="stat-row"><span class="stat-label">Lingua</span><span class="stat-val">IT · EN</span></div>
+          <div class="stat-row"><span class="stat-label" data-i18n="about_year">Anno di studi</span><span class="stat-val accent">3°</span></div>
+          <div class="stat-row"><span class="stat-label" data-i18n="about_spec">Specializzazione</span><span class="stat-val">Full Stack</span></div>
+          <div class="stat-row"><span class="stat-label" data-i18n="about_avail">Disponibilità</span><span class="stat-val accent" data-i18n="about_avail_val">Aperta</span></div>
+          <div class="stat-row"><span class="stat-label" data-i18n="about_lang">Lingua</span><span class="stat-val">IT · EN</span></div>
         </div>
       </aside>
     </div>
@@ -193,15 +202,15 @@
     <div class="stats-row">
       <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
         <div class="stat-num"><span class="counter" data-target="2">0</span></div>
-        <div class="stat-desc">Progetti completati e in produzione</div>
+        <div class="stat-desc" data-i18n="stat1">Progetti completati e in produzione</div>
       </div>
       <div class="stat-card" data-aos="fade-up" data-aos-delay="120">
         <div class="stat-num"><span class="counter" data-target="3">0</span><span class="suffix">+</span></div>
-        <div class="stat-desc">Tecnologie padroneggiate nello stack</div>
+        <div class="stat-desc" data-i18n="stat2">Tecnologie padroneggiate nello stack</div>
       </div>
       <div class="stat-card" data-aos="fade-up" data-aos-delay="240">
         <div class="stat-num"><span class="counter" data-target="1">0</span></div>
-        <div class="stat-desc">Piattaforma in produzione per beneficenza</div>
+        <div class="stat-desc" data-i18n="stat3">Piattaforma in produzione per beneficenza</div>
       </div>
     </div>
   </div>
@@ -212,7 +221,7 @@
   <div class="container">
     <header class="section-head" data-aos="fade-up">
       <span class="section-num">02</span>
-      <h2 class="section-title">Stack tecnologico</h2>
+      <h2 class="section-title" data-i18n="stack_title">Stack tecnologico</h2>
       <span class="section-line"></span>
     </header>
 
@@ -282,7 +291,7 @@
   <div class="container">
     <header class="section-head" data-aos="fade-up">
       <span class="section-num">03</span>
-      <h2 class="section-title">Competenze</h2>
+      <h2 class="section-title" data-i18n="skills_title">Competenze</h2>
       <span class="section-line"></span>
     </header>
 
@@ -303,7 +312,7 @@
   <div class="container">
     <header class="section-head" data-aos="fade-up">
       <span class="section-num">04</span>
-      <h2 class="section-title">Progetti selezionati</h2>
+      <h2 class="section-title" data-i18n="portfolio_title">Progetti selezionati</h2>
       <span class="section-line"></span>
     </header>
 
@@ -313,18 +322,18 @@
         <div class="project-info">
           <div class="project-meta">
             <span class="pill">2025</span>
-            <span>Beneficenza · App mobile</span>
+            <span data-i18n="portfolio_p1_meta">Beneficenza · App mobile</span>
           </div>
-          <h3 class="project-title">Gestionale per studio di psicologhe</h3>
-          <p class="project-desc">
+          <h3 class="project-title" data-i18n="portfolio_p1_title">Gestionale per studio di psicologhe</h3>
+          <p class="project-desc" data-i18n="portfolio_p1_desc">
             App mobile sviluppata pro bono in Flutter con backend Firebase: gestione
             agenda, prenotazione appuntamenti e tracciamento pagamenti dei pazienti.
           </p>
           <ul class="project-features">
-            <li>Authentication con accesso sicuro multi-utente</li>
-            <li>Firestore per dati pazienti e appuntamenti in real-time</li>
-            <li>Storage per documenti e note cliniche riservate</li>
-            <li>Notifiche push di promemoria appuntamenti</li>
+            <li data-i18n="portfolio_p1_f1">Authentication con accesso sicuro multi-utente</li>
+            <li data-i18n="portfolio_p1_f2">Firestore per dati pazienti e appuntamenti in real-time</li>
+            <li data-i18n="portfolio_p1_f3">Storage per documenti e note cliniche riservate</li>
+            <li data-i18n="portfolio_p1_f4">Notifiche push di promemoria appuntamenti</li>
           </ul>
           <div class="project-stack">
             <span class="tag">Flutter</span>
@@ -355,18 +364,18 @@
         <div class="project-info">
           <div class="project-meta">
             <span class="pill">2025</span>
-            <span>Aziendale · Dashboard web</span>
+            <span data-i18n="portfolio_p2_meta">Aziendale · Dashboard web</span>
           </div>
-          <h3 class="project-title">Piattaforma ESG</h3>
-          <p class="project-desc">
+          <h3 class="project-title" data-i18n="portfolio_p2_title">Piattaforma ESG</h3>
+          <p class="project-desc" data-i18n="portfolio_p2_desc">
             Sistema web di gestione e monitoraggio dei valori ESG (Environmental, Social,
             Governance) per aziende: raccolta dati, KPI dinamici, report esportabili.
           </p>
           <ul class="project-features">
-            <li>Dashboard con KPI ambientali, sociali e di governance</li>
-            <li>Import dati da CSV e form personalizzati</li>
-            <li>Storico per esercizio e confronto pluriennale</li>
-            <li>Esportazione report in PDF</li>
+            <li data-i18n="portfolio_p2_f1">Dashboard con KPI ambientali, sociali e di governance</li>
+            <li data-i18n="portfolio_p2_f2">Import dati da CSV e form personalizzati</li>
+            <li data-i18n="portfolio_p2_f3">Storico per esercizio e confronto pluriennale</li>
+            <li data-i18n="portfolio_p2_f4">Esportazione report in PDF</li>
           </ul>
           <div class="project-stack">
             <span class="tag">PHP</span>
@@ -405,37 +414,37 @@
   <div class="container">
     <header class="section-head" data-aos="fade-up">
       <span class="section-num">05</span>
-      <h2 class="section-title">Percorso &amp; Esperienza</h2>
+      <h2 class="section-title" data-i18n="timeline_title">Percorso &amp; Esperienza</h2>
       <span class="section-line"></span>
     </header>
 
     <div class="timeline">
       <div class="timeline-item live" data-aos="fade-up">
-        <div class="tl-date">2023 — In corso</div>
-        <h3 class="tl-title">Informatica per il Management</h3>
-        <div class="tl-org">Università · Terzo anno</div>
-        <p class="tl-desc">Percorso che unisce fondamenti di informatica (algoritmi, basi di dati, ingegneria del software) e materie gestionali. Focus su sviluppo web, progettazione di sistemi e analisi dei processi aziendali.</p>
+        <div class="tl-date" data-i18n="tl1_date">2023 — In corso</div>
+        <h3 class="tl-title" data-i18n="tl1_title">Informatica per il Management</h3>
+        <div class="tl-org" data-i18n="tl1_org">Università · Terzo anno</div>
+        <p class="tl-desc" data-i18n="tl1_desc">Percorso che unisce fondamenti di informatica (algoritmi, basi di dati, ingegneria del software) e materie gestionali. Focus su sviluppo web, progettazione di sistemi e analisi dei processi aziendali.</p>
       </div>
 
       <div class="timeline-item" data-aos="fade-up" data-aos-delay="80">
-        <div class="tl-date">2026</div>
-        <h3 class="tl-title">Piattaforma ESG</h3>
-        <div class="tl-org">Progetto cliente · Sviluppo full stack</div>
-        <p class="tl-desc">Progettazione e sviluppo end-to-end di una piattaforma di monitoraggio ESG in PHP con database SQL: schema dati, backend, dashboard e generazione report.</p>
+        <div class="tl-date" data-i18n="tl2_date">2026</div>
+        <h3 class="tl-title" data-i18n="tl2_title">Piattaforma ESG</h3>
+        <div class="tl-org" data-i18n="tl2_org">Progetto cliente · Sviluppo full stack</div>
+        <p class="tl-desc" data-i18n="tl2_desc">Progettazione e sviluppo end-to-end di una piattaforma di monitoraggio ESG in PHP con database SQL: schema dati, backend, dashboard e generazione report.</p>
       </div>
 
       <div class="timeline-item" data-aos="fade-up" data-aos-delay="160">
-        <div class="tl-date">2026</div>
-        <h3 class="tl-title">Gestionale Studio Psicologhe</h3>
-        <div class="tl-org">Progetto pro bono · Flutter + Firebase</div>
-        <p class="tl-desc">Sviluppo gratuito di un'app mobile completa per uno studio di psicologhe: analisi dei requisiti con il cliente, modellazione del database Firestore, app Flutter cross-platform.</p>
+        <div class="tl-date" data-i18n="tl3_date">2026</div>
+        <h3 class="tl-title" data-i18n="tl3_title">Gestionale Studio Psicologhe</h3>
+        <div class="tl-org" data-i18n="tl3_org">Progetto pro bono · Flutter + Firebase</div>
+        <p class="tl-desc" data-i18n="tl3_desc">Sviluppo gratuito di un'app mobile completa per uno studio di psicologhe: analisi dei requisiti con il cliente, modellazione del database Firestore, app Flutter cross-platform.</p>
       </div>
 
       <div class="timeline-item" data-aos="fade-up" data-aos-delay="240">
-        <div class="tl-date">In continuo</div>
-        <h3 class="tl-title">Auto-formazione</h3>
-        <div class="tl-org">Flutter · React · architetture moderne</div>
-        <p class="tl-desc">Sperimentazione costante con nuovi stack e pattern: app cross-platform in Flutter, interfacce React performanti, automazione in Python.</p>
+        <div class="tl-date" data-i18n="tl4_date">In continuo</div>
+        <h3 class="tl-title" data-i18n="tl4_title">Auto-formazione</h3>
+        <div class="tl-org" data-i18n="tl4_org">Flutter · React · architetture moderne</div>
+        <p class="tl-desc" data-i18n="tl4_desc">Sperimentazione costante con nuovi stack e pattern: app cross-platform in Flutter, interfacce React performanti, automazione in Python.</p>
       </div>
     </div>
   </div>
@@ -446,15 +455,15 @@
   <div class="container">
     <header class="section-head" data-aos="fade-up">
       <span class="section-num">06</span>
-      <h2 class="section-title">Cosa posso fare per te</h2>
+      <h2 class="section-title" data-i18n="services_title">Cosa posso fare per te</h2>
       <span class="section-line"></span>
     </header>
 
     <div class="services-hero" data-aos="fade-up" data-aos-delay="100">
-      <h3 class="services-heading">Hai bisogno di un sito o un'app?<br>Ecco cosa posso realizzare</h3>
-      <p class="services-sub">Sfoglia i progetti, trova quello simile a ciò che hai in mente e richiedimi un preventivo gratuito</p>
+      <h3 class="services-heading" data-i18n-html="services_heading">Hai bisogno di un sito o un'app?<br>Ecco cosa posso realizzare</h3>
+      <p class="services-sub" data-i18n="services_sub">Sfoglia i progetti, trova quello simile a ciò che hai in mente e richiedimi un preventivo gratuito</p>
       <a href="#contact" class="btn btn-primary">
-        Richiedi un preventivo gratuito
+        <span data-i18n="services_cta">Richiedi un preventivo gratuito</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -462,31 +471,31 @@
     <div class="services-filters" data-aos="fade-up">
       <div class="filters-row">
         <div class="filter-group">
-          <span class="filter-label">Settore</span>
+          <span class="filter-label" data-i18n="filter_sector">Settore</span>
           <div class="filter-chips" id="filterSector"></div>
         </div>
         <div class="filter-group">
-          <span class="filter-label">Tipo</span>
+          <span class="filter-label" data-i18n="filter_type">Tipo</span>
           <div class="filter-chips" id="filterType"></div>
         </div>
       </div>
       <div class="filters-footer">
         <span class="filter-count" id="filterCount">30 progetti trovati</span>
-        <button class="btn btn-ghost filter-reset-btn" id="filterReset">Azzera filtri</button>
+        <button class="btn btn-ghost filter-reset-btn" id="filterReset" data-i18n="filter_reset">Azzera filtri</button>
       </div>
     </div>
 
     <div class="services-grid" id="servicesGrid"></div>
 
     <div class="services-empty" id="servicesEmpty">
-      <p>Nessun progetto trovato con i filtri selezionati.</p>
-      <button class="btn btn-ghost" id="filterReset2">Azzera filtri</button>
+      <p data-i18n="services_empty">Nessun progetto trovato con i filtri selezionati.</p>
+      <button class="btn btn-ghost" id="filterReset2" data-i18n="filter_reset">Azzera filtri</button>
     </div>
 
     <div class="services-custom" data-aos="fade-up">
-      <p class="services-custom-text">Hai un'idea diversa? Raccontamela — realizzo anche progetti completamente custom.</p>
+      <p class="services-custom-text" data-i18n="services_custom_text">Hai un'idea diversa? Raccontamela — realizzo anche progetti completamente custom.</p>
       <a href="#contact" class="btn btn-ghost">
-        Scrivimi
+        <span data-i18n="services_custom_cta">Scrivimi</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </a>
     </div>
@@ -498,13 +507,13 @@
   <div class="container">
     <header class="section-head" data-aos="fade-up">
       <span class="section-num">07</span>
-      <h2 class="section-title">Contatti</h2>
+      <h2 class="section-title" data-i18n="contact_title">Contatti</h2>
       <span class="section-line"></span>
     </header>
 
     <div class="contact-grid">
       <div data-aos="fade-up">
-        <p class="contact-blurb">
+        <p class="contact-blurb" data-i18n-html="contact_blurb">
           Hai un progetto in mente? <span class="accent">Parliamo.</span>
         </p>
 
@@ -519,7 +528,7 @@
             <span class="channel-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
             </span>
-            <div><div class="channel-label">Telefono</div><div class="channel-val">+39 324 686 9753</div></div>
+            <div><div class="channel-label" data-i18n="contact_phone">Telefono</div><div class="channel-val">+39 324 686 9753</div></div>
           </a>
           <a href="https://github.com/Tommus129" target="_blank" rel="noopener" class="channel">
             <span class="channel-icon">
@@ -550,27 +559,35 @@
 
         <div class="form-row">
           <div class="field">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="Nome" required placeholder="Mario Rossi" />
+            <label for="name" data-i18n="contact_name_lbl">Nome</label>
+            <input type="text" id="name" name="Nome" required
+              placeholder="Mario Rossi"
+              data-i18n-placeholder="contact_name_ph" />
           </div>
           <div class="field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required placeholder="mario@azienda.it" />
+            <label for="email" data-i18n="contact_email_lbl">Email</label>
+            <input type="email" id="email" name="Email" required
+              placeholder="mario@azienda.it"
+              data-i18n-placeholder="contact_email_ph" />
           </div>
         </div>
         <div class="field">
-          <label for="subject">Oggetto</label>
-          <input type="text" id="subject" name="Oggetto" placeholder="Sito vetrina, gestionale, altro…" />
+          <label for="subject" data-i18n="contact_subject_lbl">Oggetto</label>
+          <input type="text" id="subject" name="Oggetto"
+            placeholder="Sito vetrina, gestionale, altro…"
+            data-i18n-placeholder="contact_subject_ph" />
         </div>
         <div class="field">
-          <label for="message">Messaggio</label>
-          <textarea id="message" name="Messaggio" required placeholder="Raccontami il tuo progetto…"></textarea>
+          <label for="message" data-i18n="contact_message_lbl">Messaggio</label>
+          <textarea id="message" name="Messaggio" required
+            placeholder="Raccontami il tuo progetto…"
+            data-i18n-placeholder="contact_message_ph"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">
-          Invia messaggio
+          <span data-i18n="contact_send">Invia messaggio</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </button>
-        <div class="form-status" id="formStatus">✓ Messaggio inviato. Ti rispondo entro 24h.</div>
+        <div class="form-status" id="formStatus"></div>
       </form>
     </div>
   </div>
@@ -578,13 +595,17 @@
 
 <footer class="footer">
   <div class="container footer-inner">
-    <div>© <span id="year"></span> Tommaso Prandini · Tutti i diritti riservati</div>
-    <div>Costruito con cura — HTML, CSS, JS</div>
+    <div>© <span id="year"></span> Tommaso Prandini · <span data-i18n="footer_rights">Tutti i diritti riservati</span></div>
+    <div data-i18n="footer_built">Costruito con cura — HTML, CSS, JS</div>
   </div>
 </footer>
 
 <!-- Librerie CDN -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- i18n — caricare prima di projects e services -->
+<script src="js/translations.js"></script>
+<script src="js/lang.js"></script>
 
 <!-- Dati e logica sezione servizi -->
 <script src="js/projects.js"></script>

@@ -162,6 +162,22 @@ section { padding: var(--s-9) 0; position: relative; z-index: 2; }
 .nav-cv:hover { transform: translateY(-1px); box-shadow: 0 8px 20px -6px var(--accent-glow); }
 .nav-cv svg { width: 14px; height: 14px; }
 
+/* ── Lang switch ── */
+.lang-switch {
+  display: flex; align-items: center; gap: 2px;
+  font-family: var(--font-mono); font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.06em;
+}
+.lang-btn {
+  background: none; border: none; cursor: pointer;
+  color: var(--fg-mute); padding: 5px 7px; border-radius: var(--r-sm);
+  transition: color var(--t-fast) var(--ease);
+  line-height: 1;
+}
+.lang-btn.active { color: var(--accent); }
+.lang-btn:hover:not(.active) { color: var(--fg); }
+.lang-sep { color: var(--fg-dim); opacity: 0.5; font-size: 0.7rem; }
+
 @media (max-width: 720px) {
   .nav-links { display: none; }
   .nav-cv span { display: none; }
