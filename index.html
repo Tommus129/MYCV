@@ -53,6 +53,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Progetti</a></li>
         <li><a href="#timeline">Esperienza</a></li>
+        <li><a href="#services">Per te</a></li>
         <li><a href="#contact">Contatti</a></li>
       </ul>
     </nav>
@@ -440,11 +441,63 @@
   </div>
 </section>
 
+<!-- ========== SERVIZI ========== -->
+<section id="services">
+  <div class="container">
+    <header class="section-head" data-aos="fade-up">
+      <span class="section-num">06</span>
+      <h2 class="section-title">Cosa posso fare per te</h2>
+      <span class="section-line"></span>
+    </header>
+
+    <div class="services-hero" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="services-heading">Hai bisogno di un sito o un'app?<br>Ecco cosa posso realizzare</h3>
+      <p class="services-sub">Sfoglia i progetti, trova quello simile a ciò che hai in mente e richiedimi un preventivo gratuito</p>
+      <a href="#contact" class="btn btn-primary">
+        Richiedi un preventivo gratuito
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+
+    <div class="services-filters" data-aos="fade-up">
+      <div class="filters-row">
+        <div class="filter-group">
+          <span class="filter-label">Settore</span>
+          <div class="filter-chips" id="filterSector"></div>
+        </div>
+        <div class="filter-group">
+          <span class="filter-label">Tipo</span>
+          <div class="filter-chips" id="filterType"></div>
+        </div>
+      </div>
+      <div class="filters-footer">
+        <span class="filter-count" id="filterCount">30 progetti trovati</span>
+        <button class="btn btn-ghost filter-reset-btn" id="filterReset">Azzera filtri</button>
+      </div>
+    </div>
+
+    <div class="services-grid" id="servicesGrid"></div>
+
+    <div class="services-empty" id="servicesEmpty">
+      <p>Nessun progetto trovato con i filtri selezionati.</p>
+      <button class="btn btn-ghost" id="filterReset2">Azzera filtri</button>
+    </div>
+
+    <div class="services-custom" data-aos="fade-up">
+      <p class="services-custom-text">Hai un'idea diversa? Raccontamela — realizzo anche progetti completamente custom.</p>
+      <a href="#contact" class="btn btn-ghost">
+        Scrivimi
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ========== CONTACT ========== -->
 <section id="contact">
   <div class="container">
     <header class="section-head" data-aos="fade-up">
-      <span class="section-num">06</span>
+      <span class="section-num">07</span>
       <h2 class="section-title">Contatti</h2>
       <span class="section-line"></span>
     </header>
@@ -532,6 +585,10 @@
 
 <!-- Librerie CDN -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- Dati e logica sezione servizi -->
+<script src="js/projects.js"></script>
+<script src="js/services.js"></script>
 
 <!-- Script principale -->
 <script src="js/main.js"></script>
